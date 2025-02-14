@@ -1,0 +1,375 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/Imagenes/fondo1.jpg");
+}
+
+.hero-background {
+  background-image: url("/Imagenes/1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-content {
+  padding: 2rem;
+  border-radius: 8px;
+}
+.hero-content::before {
+  content: ""; /* Necesario para que el pseudo-elemento se muestre */
+  position: absolute; /* Posiciona el pseudo-elemento */
+  top: 0; /* Alinea al principio del body */
+  left: 0; /* Alinea al lado izquierdo del body */
+  right: 0; /* Alinea al lado derecho del body */
+  bottom: 0; /* Alinea al final del body */
+  background-color: rgba(0, 0, 0, 0.3); /* Negro con 20% de opacidad */
+  z-index: 1; /* Asegúrate de que esté por encima de la imagen de fondo */
+}
+
+/*  registro */
+.select.is-multiple select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select.is-multiple select:focus {
+  border-color: #88aaff;
+  outline: none;
+}
+
+.custom-checkbox-group {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px 0;
+  position: relative;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "✔";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* registro */
+
+.container {
+  position: relative; /* Asegúrate de que el contenido esté por encima de la superposición */
+  z-index: 2; /* Asegúrate de que el contenido esté por encima de la superposición */
+}
+
+.logo-4vv {
+  width: 5rem;
+  height: 5rem;
+}
+.transparencia{
+  background-color: black;
+  opacity: 0.7;
+}
+.negrita{
+  font-weight: bold;
+
+}
+.acerca-de {
+  padding: 2rem 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: hidden; /* Para ocultar el contenido que se desliza */
+}
+
+.acerca-de-texto {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s ease forwards;
+}
+
+.icon-box {
+  text-align: center;
+  margin: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 0.8s ease forwards;
+}
+
+/* Animaciones escalonadas para los iconos */
+.icon-box:nth-child(1) { animation: slideInUp 0.8s ease 0.2s forwards; }
+.icon-box:nth-child(2) { animation: slideInUp 0.8s ease 0.4s forwards; }
+.icon-box:nth-child(3) { animation: slideInUp 0.8s ease 0.6s forwards; }
+.icon-box:nth-child(4) { animation: slideInUp 0.8s ease 0.8s forwards; }
+.icon-box:nth-child(5) { animation: slideInUp 0.8s ease 1s forwards; }
+
+/* Keyframes para las animaciones */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*Modales*/
+.modal {
+  display: none;
+}
+
+.modal:target {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.is-one-third{
+  padding: 20px;
+}
+.card {
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.fondo-card-noticias:hover{
+  padding-right: 30px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);  
+  background-color: pink;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: padding-right 0.3s ease;
+}
+
+.fondo-card-eventos:hover{
+  padding-right: 30px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);  
+  background-color: rgb(246, 211, 129);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: padding-right 0.3s ease;
+}
+
+.fondo-card-voluntariados:hover{
+  padding-right: 30px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);  
+  background-color: #607192;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: padding-right 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.card {
+  width: 450px;
+  height: 30rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  margin: 10px;
+}
+.title.is-4 {
+  font-size: 1.5rem;
+  color: rgb(87, 168, 168);
+}
+
+.button {
+  margin-top: 8px;
+}
+.social-icon {
+  margin: 0 10px;
+}
+.social-icon-img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s;
+}
+.social-icon-img:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  color: black;
+  font-size: 20px;
+  font-family: var(--bulma-body-family);
+}
+
+
+.level {
+  padding: 5% 5% 5% 5%;
+}
+
+
+.media-content title {
+  margin-bottom: 40px;
+
+}
+
+button a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+footer a {
+  text-decoration: none; 
+  color: inherit;
+}
+
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx2:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.isolated-button {
+  position: absolute;
+  left: 15%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
