@@ -27,7 +27,9 @@ body {
   background-color: rgba(0, 0, 0, 0.3); /* Negro con 20% de opacidad */
   z-index: 1; /* Asegúrate de que esté por encima de la imagen de fondo */
 }
-
+#boton-volun{
+  z-index: 100;
+}
 /*  registro */
 .select.is-multiple select {
   width: 100%;
@@ -372,4 +374,3 @@ footer a {
   transform: translate(-50%);
   z-index: 1;
 }
-
