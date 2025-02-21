@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir Alumnos</title>
-    <link rel="stylesheet" href="./../bulma/css/bulma.css" >
-    <link rel="stylesheet" href="./../App/filtradoDeVoluntariado.css" >
-    <link rel="icon" type="image/png" href="./../Imagenes/logo.png" >
+    <link rel="stylesheet" href="./../bulma/css/bulma.css">
+    <link rel="stylesheet" href="./../App/coordinador.css" />
+    <link rel="icon" type="image/png" href="./../Imagenes/logo.png" />
     <script
       src="https://kit.fontawesome.com/dc47467364.js"
       crossorigin="anonymous"
@@ -22,7 +22,7 @@
           class="navbar-item logo-4vv"
           src="/Imagenes/logo.png"
           alt="Logo 4V"
-        >
+        />
         <a
           role="button"
           class="navbar-burger"
@@ -41,8 +41,8 @@
           <a class="navbar-item has-text-info-90-invert" href="./index.html"
             >Inicio</a
           >
-          <a class="navbar-item has-text-info-90-invert" href="./Noticias.html"
-            >Noticias
+          <a class="navbar-item has-text-info-90-invert" href="./eventos.html"
+            >Eventos
           </a>
           <a
             class="navbar-item has-text-info-90-invert"
@@ -61,518 +61,479 @@
       </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <section class="section">
-      <div class="container">
-        <!-- Filtros -->
-        <div class="filtro box">
-          <!-- Filtros avanzados -->
-          <div class="columns is-multiline is-variable is-1">
-            <!-- Filtro por Estado del Voluntariado -->
-            <!-- Filtro por Curso -->
-            <div class="column is-3">
-              <div class="field">
-                <label class="label">Habilidades</label>
-                <div class="control">
-                  <div class="select is-fullwidth">
-                    <select id="habilidades" required>
-                      <option value="">- Habilidades -</option>
-                      <option>Docencia</option>
-                      <option>Logística</option>
-                      <option>Comunicación</option>
-                      <option>Organización de eventos</option>
-                      <option>Idiomas</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Filtro por Disponibilidad -->
-            <div class="column is-3">
-              <div class="field">
-                <label class="label">Disponibilidad</label>
-                <div class="control">
-                  <div class="select is-fullwidth">
-                    <select id="disponibilidad" required>
-                      <option value="">- Disponibilidad -</option>
-                      <option>Mañanas</option>
-                      <option>Tardes</option>
-                      <option>Fines de semana</option>
-                      <option>Flexible</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Filtro por Habilidades -->
-            <div class="column is-2">
-              <div class="field">
-                <label class="label">Curso</label>
-                <div class="control">
-                  <div class="select is-fullwidth">
-                    <select id="curso" required>
-                      <option value="">- Curso -</option>
-                      <option>Cualquiera</option>
-                      <option>1ºDAM</option>
-                      <option>2ºDAM</option>
-                      <option>1ºASIR</option>
-                      <option>2ºASIR</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Filtro por Ubicación -->
-            <div class="column is-2">
-              <div class="field">
-                <label class="label">Ubicación</label>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="text"
-                    id="ubicacion"
-                    placeholder="Pamplona"
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- Filtro por Ubicación -->
-            <div class="column is-2">
-              <div class="field">
-                <label class="label">Nombre y Apellidos</label>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="text"
-                    id="ubicacion"
-                    placeholder="Laura Méndez"
-                  >
-                </div>
-              </div>
-            </div>
-            <!-- Botones de búsqueda -->
-            <div class="column is-fullwidth">
-              <div class="columns is-vcentered">
-                <div class="column is-half">
-                  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-                    <ul>
-                      <li>
-                        <a href="#"
-                          ><span class="tag is-info is-light"
-                            >Burlada
-                            <button class="delete is-small"></button></span
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><span class="tag is-info is-light"
-                            >Docencia
-                            <button class="delete is-small"></button></span
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><span class="tag is-info is-light"
-                            >Tardes
-                            <button class="delete is-small"></button></span
-                        ></a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          ><span class="tag is-info is-light"
-                            >1ºDAM
-                            <button class="delete is-small"></button></span
-                        ></a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="column is-half">
-                  <div class="field is-grouped is-grouped-right">
-                    <div class="control">
-                      <button class="button is-info is-light">
-                        <span class="icon">
-                          <i class="fas fa-search"></i>
-                        </span>
-                        <span>Buscar</span>
-                      </button>
-                    </div>
-                    <div class="control">
-                      <button class="button is-light">
-                        <span class="icon">
-                          <i class="fas fa-undo"></i>
-                        </span>
-                        <span>Limpiar filtros</span>
-                      </button>
-                    </div>
-                  </div>
+    
+    <div class="container mt-5 mb-5">
+     
+      <div class="filtro box">
+     
+        <div class="columns is-multiline is-variable is-1">
+         
+          <div class="column is-3">
+            <div class="field">
+              <label class="label">Habilidades</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="habilidades" required>
+                    <option value="">- Habilidades -</option>
+                    <option>Docencia</option>
+                    <option>Logística</option>
+                    <option>Comunicación</option>
+                    <option>Organización de eventos</option>
+                    <option>Idiomas</option>
+                  </select>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Contenedor de iniciativas -->
-        <div class="columns">
-          <!-- Primera iniciativa-box -->
-          <div class="column is-half">
-            <div class="iniciativa box">
-              <div class="columns is-vcentered">
-                <!-- Columna para la imagen y nombre -->
-                <div class="column is-6">
-                  <div class="columns is-vcentered">
-                    <div class="column is-4">
-                      <figure class="image is-4by4">
-                        <img
-                          class="is-rounded"
-                          src="./../Imagenes/avatar-usuario.jpg"
-                          alt="Avatar"
-                        >
-                      </figure>
-                    </div>
-                    <div class="column is-fulllwidth">
-                      <strong class="nombre-proyecto">Laura Méndez</strong
-                      >
-                      <subtitle>Completados: 3</subtitle>
-                      <!--<a class="button is-info is-light mt-4" href="añadirAlumnos.html">Añadir</a>-->
-                    </div>
-                  </div>
+          
+          <div class="column is-3">
+            <div class="field">
+              <label class="label">Disponibilidad</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="disponibilidad" required>
+                    <option value="">- Disponibilidad -</option>
+                    <option>Mañanas</option>
+                    <option>Tardes</option>
+                    <option>Fines de semana</option>
+                    <option>Flexible</option>
+                  </select>
                 </div>
               </div>
-              <!-- Columna para Datos Personales -->
-              <div>
-                <details>
-                  <summary>Datos Personales</summary>
-                  <table class="table is-fullwidth">
-                    <tbody>
-                      <tr>
-                        <td><i class="fa-solid fa-graduation-cap"></i></td>
-                        <td>1ºDAM</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-clock"></i></td>
-                        <td>Martes y jueves de 18h-20h</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-map-marker-alt"></i></td>
-                        <td>Calle Ejemplo, 123, 31001 Pamplona, Navarra</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-id-card"></i></td>
-                        <td>12345678A</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-phone"></i></td>
-                        <td>+34 123 456 789</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-envelope"></i></td>
-                        <td>voluntario@example.com</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </details>
-              </div>
-              <!-- Historial de Voluntariado -->
-              <details class="mt-4">
-                <summary>Historial de Voluntariado</summary>
-                <div class="content">
-                  <div class="columns is-multiline is-centered">
-                    <!-- Actividad 1 -->
-                    <div class="column is-fullwidth">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <!--<div class="media-left">
-                                                    <span class="icon has-text-info">
-                                                        <i class="fas fa-hand-holding-heart fa-lg"></i>
-                                                    </span>
-                                                </div>-->
-                          <div class="media-content">
-                            <p class="title is-6">Apoyo Escolar</p>
-                            <p class="subtitle is-7">Proyecto Puzle Digital</p>
-                            <div class="media-centered">
-                              <span class="icon has-text-info">
-                                <i class="fas fa-hand-holding-heart fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Octubre 2022 - Mayo 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>Martes y jueves, 18:00 - 20:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Actividad 2 -->
-                    <div class="column is-fullwidth">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-6">Reforestación</p>
-                            <p class="subtitle is-7">
-                              Parque Natural de Urbasa
-                            </p>
-                            <div class="media-centered">
-                              <span class="icon has-text-success">
-                                <i class="fas fa-tree fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Marzo 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>10:00 - 14:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="columns is-multiline is-centered">
-                    <!-- Actividad 3 -->
-                    <div class="column is-half">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-6">Comedor Social</p>
-                            <p class="subtitle is-7">Cáritas Pamplona</p>
-                            <div class="media-centered">
-                              <span class="icon has-text-warning">
-                                <i class="fas fa-utensils fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Enero 2023 - Febrero 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>12:00 - 15:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </details>
             </div>
           </div>
 
-          <!-- Segunda iniciativa-box -->
-          <!-- Primera iniciativa-box -->
-          <div class="column is-half">
-            <div class="iniciativa box">
-              <div class="columns is-vcentered">
-                <!-- Columna para la imagen y nombre -->
-                <div class="column is-6">
-                  <div class="columns is-vcentered">
-                    <div class="column is-4">
-                      <figure class="image is-4by4">
-                        <img
-                          class="is-rounded"
-                          src="./../Imagenes/avatar-usuario.jpg"
-                          alt="Avatar"
-                        >
-                      </figure>
-                    </div>
-                    <div class="column is-fullwidth">
-                      <strong class="nombre-proyecto">Raúl Navarro</strong
-                      >
-                      <subtitle>Completados: 3</subtitle>
-                    </div>
-                  </div>
+          
+          <div class="column is-2">
+            <div class="field">
+              <label class="label">Curso</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="curso" required>
+                    <option value="">- Curso -</option>
+                    <option>Cualquiera</option>
+                    <option>1ºDAM</option>
+                    <option>2ºDAM</option>
+                    <option>1ºASIR</option>
+                    <option>2ºASIR</option>
+                  </select>
                 </div>
               </div>
-              <!-- Columna para Datos Personales -->
-              <div>
-                <details>
-                  <summary>Datos Personales</summary>
-                  <table class="table is-fullwidth">
-                    <tbody>
-                      <tr>
-                        <td><i class="fa-solid fa-graduation-cap"></i></td>
-                        <td>1ºDAM</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-clock"></i></td>
-                        <td>Martes y jueves de 18h-20h</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-map-marker-alt"></i></td>
-                        <td>Calle Ejemplo, 123, 31001 Pamplona, Navarra</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-id-card"></i></td>
-                        <td>12345678A</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-phone"></i></td>
-                        <td>+34 123 456 789</td>
-                      </tr>
-                      <tr>
-                        <td><i class="fa-solid fa-envelope"></i></td>
-                        <td>voluntario@example.com</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </details>
-              </div>
-              <!-- Historial de Voluntariado -->
-              <details class="mt-4">
-                <summary>Historial de Voluntariado</summary>
-                <div class="content">
-                  <div class="columns is-multiline is-centered">
-                    <!-- Actividad 1 -->
-                    <div class="column is-fullwidth">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <!--<div class="media-left">
-                                                    <span class="icon has-text-info">
-                                                        <i class="fas fa-hand-holding-heart fa-lg"></i>
-                                                    </span>
-                                                </div>-->
-                          <div class="media-content">
-                            <p class="title is-6">Apoyo Escolar</p>
-                            <p class="subtitle is-7">Proyecto Puzle Digital</p>
-                            <div class="media-centered">
-                              <span class="icon has-text-info">
-                                <i class="fas fa-hand-holding-heart fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Octubre 2022 - Mayo 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>Martes y jueves, 18:00 - 20:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+          </div>
 
-                    <!-- Actividad 2 -->
-                    <div class="column is-fullwidth">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-6">Reforestación</p>
-                            <p class="subtitle is-7">
-                              Parque Natural de Urbasa
-                            </p>
-                            <div class="media-centered">
-                              <span class="icon has-text-success">
-                                <i class="fas fa-tree fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Marzo 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>10:00 - 14:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+          
+          <div class="column is-2">
+            <div class="field">
+              <label class="label">Ubicación</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  id="ubicacion"
+                  placeholder="Pamplona"
+                />
+              </div>
+            </div>
+          </div>
+        
+          <div class="column is-2">
+            <div class="field">
+              <label class="label">Nombre y Apellidos</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Laura Méndez" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="column is-fullwidth">
+            <div class="columns is-vcentered">
+              <div class="column is-half">
+                <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                  <ul>
+                    <li>
+                      <a href="#"
+                        ><span class="tag is-info is-light">Burlada </span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><span class="tag is-info is-light">Docencia </span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><span class="tag is-info is-light">Tardes </span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><span class="tag is-info is-light">1ºDAM </span></a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="column is-half">
+                <div class="field is-grouped is-grouped-right">
+                  <div class="control">
+                    <button class="button is-info is-light">
+                      <span class="icon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                      <span>Buscar</span>
+                    </button>
                   </div>
-                  <div class="columns is-multiline is-centered">
-                    <!-- Actividad 3 -->
-                    <div class="column is-half">
-                      <div class="box has-text-centered">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-6">Comedor Social</p>
-                            <p class="subtitle is-7">Cáritas Pamplona</p>
-                            <div class="media-centered">
-                              <span class="icon has-text-warning">
-                                <i class="fas fa-utensils fa-lg"></i>
-                              </span>
-                            </div>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-calendar-alt"></i>
-                                </span>
-                                <span>Enero 2023 - Febrero 2023</span>
-                              </span>
-                            </p>
-                            <p class="is-size-7">
-                              <span class="icon-text">
-                                <span class="icon">
-                                  <i class="fas fa-clock"></i>
-                                </span>
-                                <span>12:00 - 15:00</span>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="control">
+                    <button class="button is-light">
+                      <span class="icon">
+                        <i class="fas fa-undo"></i>
+                      </span>
+                      <span>Limpiar filtros</span>
+                    </button>
                   </div>
                 </div>
-              </details>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Pie de página -->
+      
+      <div class="columns">
+      
+        <div class="column is-half">
+          <div class="iniciativa box">
+            <div class="columns is-vcentered">
+              
+              <div class="column is-6">
+                <div class="columns is-vcentered">
+                  <div class="column is-4">
+                    <figure class="image is-4by4">
+                      <img
+                        class="is-rounded"
+                        src="./../Imagenes/avatar-usuario.jpg"
+                        alt="Avatar"
+                      />
+                    </figure>
+                  </div>
+                  <div class="column is-fulllwidth">
+                    <strong class="nombre-proyecto">Laura Méndez</strong>
+                    <p>Completados: 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <details>
+                <summary>Datos Personales</summary>
+                <table class="table is-fullwidth">
+                  <tbody>
+                    <tr>
+                      <td><i class="fa-solid fa-graduation-cap"></i></td>
+                      <td>1ºDAM</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-clock"></i></td>
+                      <td>Martes y jueves de 18h-20h</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-map-marker-alt"></i></td>
+                      <td>Calle Ejemplo, 123, 31001 Pamplona, Navarra</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-id-card"></i></td>
+                      <td>12345678A</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-phone"></i></td>
+                      <td>+34 123 456 789</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-envelope"></i></td>
+                      <td>voluntario@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+
+            <details class="mt-4">
+              <summary>Historial de Voluntariado</summary>
+              <div class="content">
+                <div class="columns is-multiline is-centered">
+                  <div class="column is-fullwidth">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Apoyo Escolar</p>
+                          <p class="subtitle is-7">Proyecto Puzle Digital</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-info">
+                              <i class="fas fa-hand-holding-heart fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Octubre 2022 - Mayo 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>Martes y jueves, 18:00 - 20:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column is-fullwidth">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Reforestación</p>
+                          <p class="subtitle is-7">Parque Natural de Urbasa</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-success">
+                              <i class="fas fa-tree fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Marzo 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>10:00 - 14:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns is-multiline is-centered">
+                  <div class="column is-half">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Comedor Social</p>
+                          <p class="subtitle is-7">Cáritas Pamplona</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-warning">
+                              <i class="fas fa-utensils fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Enero 2023 - Febrero 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>12:00 - 15:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="column is-half">
+          <div class="iniciativa box">
+            <div class="columns is-vcentered">
+              <div class="column is-6">
+                <div class="columns is-vcentered">
+                  <div class="column is-4">
+                    <figure class="image is-4by4">
+                      <img
+                        class="is-rounded"
+                        src="./../Imagenes/avatar-usuario.jpg"
+                        alt="Avatar"
+                      />
+                    </figure>
+                  </div>
+                  <div class="column is-fullwidth">
+                    <strong class="nombre-proyecto">Raúl Navarro</strong>
+                    <p>Completados: 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <details>
+                <summary>Datos Personales</summary>
+                <table class="table is-fullwidth">
+                  <tbody>
+                    <tr>
+                      <td><i class="fa-solid fa-graduation-cap"></i></td>
+                      <td>1ºDAM</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-clock"></i></td>
+                      <td>Martes y jueves de 18h-20h</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-map-marker-alt"></i></td>
+                      <td>Calle Ejemplo, 123, 31001 Pamplona, Navarra</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-id-card"></i></td>
+                      <td>12345678A</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-phone"></i></td>
+                      <td>+34 123 456 789</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fa-solid fa-envelope"></i></td>
+                      <td>voluntario@example.com</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </details>
+            </div>
+            
+            <details class="mt-4">
+              <summary>Historial de Voluntariado</summary>
+              <div class="content">
+                <div class="columns is-multiline is-centered">
+                
+                  <div class="column is-fullwidth">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Apoyo Escolar</p>
+                          <p class="subtitle is-7">Proyecto Puzle Digital</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-info">
+                              <i class="fas fa-hand-holding-heart fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Octubre 2022 - Mayo 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>Martes y jueves, 18:00 - 20:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="column is-fullwidth">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Reforestación</p>
+                          <p class="subtitle is-7">Parque Natural de Urbasa</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-success">
+                              <i class="fas fa-tree fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Marzo 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>10:00 - 14:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns is-multiline is-centered">
+                  
+                  <div class="column is-half">
+                    <div class="box has-text-centered">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-6">Comedor Social</p>
+                          <p class="subtitle is-7">Cáritas Pamplona</p>
+                          <div class="media-centered">
+                            <span class="icon has-text-warning">
+                              <i class="fas fa-utensils fa-lg"></i>
+                            </span>
+                          </div>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                              </span>
+                              <span>Enero 2023 - Febrero 2023</span>
+                            </span>
+                          </p>
+                          <p class="is-size-7">
+                            <span class="icon-text">
+                              <span class="icon">
+                                <i class="fas fa-clock"></i>
+                              </span>
+                              <span>12:00 - 15:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
     <footer class="has-background-info-20-invert py-6">
       <div class="container">
         <div class="columns is-centered">
@@ -603,7 +564,7 @@
                   src="./../Imagenes/twitter_azul.png"
                   alt="Twitter"
                   class="social-icon-img"
-                 >
+                />
               </a>
               <a
                 href="https://www.instagram.com/cipcuatrovientos/?hl=es"
@@ -615,7 +576,7 @@
                   src="./../Imagenes/Instagram.png"
                   alt="Instagram"
                   class="social-icon-img"
-                >
+                />
               </a>
               <a
                 href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES"
@@ -627,7 +588,7 @@
                   src="./../Imagenes/facebook_azul.png"
                   alt="Facebook"
                   class="social-icon-img"
-                >
+                />
               </a>
               <a
                 href="https://www.youtube.com/@alviento/videos"
@@ -639,7 +600,7 @@
                   src="./../Imagenes/youtube_azul.png"
                   alt="YouTube"
                   class="social-icon-img"
-                >
+                />
               </a>
             </div>
           </div>

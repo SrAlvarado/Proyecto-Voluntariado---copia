@@ -21,14 +21,14 @@ body {
 .hero-content::before {
   content: ""; /* Necesario para que el pseudo-elemento se muestre */
   position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-#boton-volun{
+#boton-volun {
   z-index: 100;
 }
 /*  registro */
@@ -96,8 +96,8 @@ body {
 /* registro */
 
 .container {
-  position: relative; 
-  z-index: 2; 
+  position: relative;
+  z-index: 2;
 }
 
 .logo-4vv {
@@ -105,13 +105,12 @@ body {
   height: 5rem;
 }
 
-.transparencia{
+.transparencia {
   background-color: black;
   opacity: 0.7;
 }
-.negrita{
+.negrita {
   font-weight: bold;
-
 }
 .acerca-de {
   padding: 2rem 0;
@@ -135,11 +134,21 @@ body {
 }
 
 /* Animaciones escalonadas para los iconos */
-.icon-box:nth-child(1) { animation: slideInUp 0.8s ease 0.2s forwards; }
-.icon-box:nth-child(2) { animation: slideInUp 0.8s ease 0.4s forwards; }
-.icon-box:nth-child(3) { animation: slideInUp 0.8s ease 0.6s forwards; }
-.icon-box:nth-child(4) { animation: slideInUp 0.8s ease 0.8s forwards; }
-.icon-box:nth-child(5) { animation: slideInUp 0.8s ease 1s forwards; }
+.icon-box:nth-child(1) {
+  animation: slideInUp 0.8s ease 0.2s forwards;
+}
+.icon-box:nth-child(2) {
+  animation: slideInUp 0.8s ease 0.4s forwards;
+}
+.icon-box:nth-child(3) {
+  animation: slideInUp 0.8s ease 0.6s forwards;
+}
+.icon-box:nth-child(4) {
+  animation: slideInUp 0.8s ease 0.8s forwards;
+}
+.icon-box:nth-child(5) {
+  animation: slideInUp 0.8s ease 1s forwards;
+}
 
 /* Keyframes para las animaciones */
 @keyframes slideInLeft {
@@ -169,7 +178,7 @@ body {
 }
 
 .modal:target {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -193,7 +202,7 @@ body {
   cursor: pointer;
 }
 
-.margen-arriba{
+.margen-arriba {
   margin-top: 150px;
 }
 .icons {
@@ -202,7 +211,7 @@ body {
   justify-content: space-around;
 }
 
-.is-one-third{
+.is-one-third {
   padding: 20px;
 }
 .card {
@@ -213,28 +222,28 @@ body {
   transform: scale(1.05);
 }
 
-.fondo-card-noticias:hover{
+.fondo-card-noticias:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(219, 20, 176, 0.4);  
+  box-shadow: 0 0 15px rgba(219, 20, 176, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
 }
 
-.fondo-card-eventos:hover{
+.fondo-card-eventos:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);  
+  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: all 0.3s ease;
 }
 
-.fondo-card-voluntariados:hover{
+.fondo-card-voluntariados:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);  
+  box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
@@ -280,27 +289,23 @@ body {
   font-family: var(--bulma-body-family);
 }
 
-
 .level {
   padding: 5% 5% 5% 5%;
 }
 
-
 .media-content title {
   margin-bottom: 40px;
-
 }
 
 button a {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 
 footer a {
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
-
 
 .check {
   cursor: pointer;
