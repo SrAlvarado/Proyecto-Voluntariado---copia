@@ -4,35 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Añadir Voluntariado</title>
-    <link rel="stylesheet" href="/bulma/css/bulma.css" />
-    <link rel="stylesheet" href="/App/añadirVoluntariado.css" />
-    <link rel="icon" type="image/png" href="/Imagenes/4V-modified.png">
-    <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../bulma/css/bulma.css" />
+    <link rel="stylesheet" href="./../App/filtradoDeVoluntariado.css"/>
+    <link rel="icon" type="image/png" href="./../Imagenes/logo.png" />
+    <script
+      src="https://kit.fontawesome.com/dc47467364.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <nav class="navbar has-background-info-20-invert espacio-abajo"> 
-        <div class="navbar-brand">
-            <img class="navbar-item logo-4vv" src="/Imagenes/logo-4v-removebg-preview.png" alt="Logo 4V">
+    <nav
+      class="navbar has-background-info-20-invert"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <img
+          class="navbar-item logo-4vv"
+          src="./../Imagenes/logo.png"
+          alt="Logo 4V"
+        />
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="navbar-item has-text-info-90-invert" href="./index.html"
+            >Inicio</a
+          >
+          <a class="navbar-item has-text-info-90-invert" href="./eventos.html"
+            >Noticias
+          </a>
+          <a
+            class="navbar-item has-text-info-90-invert"
+            href="./filtradoDeVoluntariado.html"
+            >Voluntariados
+          </a>
+          <a
+            class="navbar-item has-text-info-90-invert"
+            href="./panelHistorialAlumnado.html"
+            >Historial de Alumnos
+          </a>
+          <a class="navbar-item has-text-info-90-invert" href="./usuario.html"
+            >Perfil</a
+          >
         </div>
-        <div class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item has-text-info-90-invert" href="./index.html">Inicio</a>
-              <a class="navbar-item has-text-info-90-invert" href="./Noticias.html">Noticias </a>
-              <a class="navbar-item has-text-info-90-invert" href="./filtradoDeVoluntariado.html">Voluntariados </a>
-              <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos </a>
-              <a class="navbar-item has-text-info-90-invert" href="#login">Sign In <i class="fa-solid fa-right-to-bracket"></i></a>
-            </div>
-        </div>
+      </div>
     </nav>
-    <div class="container">
+
+    <div class="container mt-5">
       <div class="form-container">
         <form>
-          <div class="title espacio-abajo has">Crear voluntariado</div>
+          <div class="title">Crear voluntariado</div>
           <div class="columns">
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="nombre">Nombre</label>
+                <label class="label negrita" for="nombre">Nombre</label>
                 <div class="control has-icons-left">
                   <input
                     class="input"
@@ -49,7 +86,7 @@
             </div>
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="empresas">Organizaciones</label>
+                <label class="label negrita" for="empresas">Organizaciones</label>
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
                     <select id="organizadores" required>
@@ -71,11 +108,11 @@
               </div>
             </div>
           </div>
-              
+
           <div class="columns">
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="sectores">Sectores</label>
+                <label class="label negrita" for="sectores">Sectores</label>
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
                     <select id="sectores" required>
@@ -89,7 +126,7 @@
                           16 Paz, justicia e instituciones sólidas
                         </option>
                       </optgroup>
-    
+
                       <optgroup
                         label="Inclusión social y lucha contra la pobreza"
                       >
@@ -99,7 +136,7 @@
                           10 Reducción de las desigualdades
                         </option>
                       </optgroup>
-    
+
                       <optgroup label="Medio ambiente y sostenibilidad">
                         <option value="13">13 Acción por el clima</option>
                         <option value="14">14 Vida submarina</option>
@@ -107,14 +144,14 @@
                           15 Vida de ecosistemas terrestres
                         </option>
                       </optgroup>
-    
+
                       <optgroup label="Salud y bienestar">
                         <option value="03">03 Salud y bienestar</option>
                         <option value="10">
                           10 Reducción de las desigualdades
                         </option>
                       </optgroup>
-    
+
                       <optgroup label="Igualdad de género y derechos humanos">
                         <option value="05">05 Igualdad de género</option>
                         <option value="10">
@@ -124,7 +161,7 @@
                           16 Paz, justicia e instituciones sólidas
                         </option>
                       </optgroup>
-    
+
                       <optgroup
                         label="Desarrollo comunitario y participación ciudadana"
                       >
@@ -135,7 +172,7 @@
                           16 Paz, justicia e instituciones sólidas
                         </option>
                       </optgroup>
-    
+
                       <optgroup
                         label="Innovación, tecnología y formación digital"
                       >
@@ -157,7 +194,7 @@
             </div>
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="curso">Curso Dirigido</label>
+                <label class="label negrita" for="curso">Curso Dirigido</label>
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
                     <select id="curso" required>
@@ -178,7 +215,7 @@
           <div class="columns">
             <div class="column is-half">
               <div class="field">
-                <label class="label">Nº Voluntarios</label>
+                <label class="label negrita">Nº Voluntarios</label>
                 <div class="control has-icons-left">
                   <input
                     class="input"
@@ -194,12 +231,12 @@
                 </div>
               </div>
             </div>
-             <!-- ODS y Metas -->
-             <div class="column is-half">
+            <!-- ODS y Metas -->
+            <div class="column is-half">
               <div class="columns">
                 <div class="column is-7">
                   <div class="field">
-                    <label class="label" for="ods">ODS implicados</label>
+                    <label class="label negrita" for="ods">ODS implicados</label>
                     <div class="control has-icons-left">
                       <div class="select is-fullwidth">
                         <select id="ods" required>
@@ -253,7 +290,7 @@
                 </div>
                 <div class="column is-5">
                   <div class="field">
-                    <label class="label" for="metas">Metas</label>
+                    <label class="label negrita" for="metas">Metas</label>
                     <div class="control has-icons-left">
                       <div class="select is-fullwidth">
                         <select id="metas" required>
@@ -278,7 +315,7 @@
           <div class="columns">
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="fecha-inicio">Fecha de Inicio</label>
+                <label class="label negrita" for="fecha-inicio">Fecha de Inicio</label>
                 <div class="control has-icons-left">
                   <input class="input" id="fecha-inicio" type="date" required />
                 </div>
@@ -286,7 +323,7 @@
             </div>
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="fecha-fin"
+                <label class="label negrita" for="fecha-fin"
                   >Fecha de Finalización</label
                 >
                 <div class="control has-icons-left">
@@ -301,29 +338,33 @@
               <div class="columns is-centered">
                 <div class="column is-narrow">
                   <div class="field">
-                    <label class="label has-text-centered mb-4">Días de voluntariado</label>
+                    <label class="label negrita has-text-centered mb-4"
+                      >Días de voluntariado</label
+                    >
                     <div class="control has-text-centered">
-                      <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
+                      <div
+                        class="is-flex is-justify-content-center is-flex-wrap-wrap"
+                      >
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="L"> L
+                          <input type="checkbox" name="dias" value="L" /> L
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="M"> M
+                          <input type="checkbox" name="dias" value="M" /> M
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="X"> X
+                          <input type="checkbox" name="dias" value="X" /> X
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="J"> J
+                          <input type="checkbox" name="dias" value="J" /> J
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="V"> V
+                          <input type="checkbox" name="dias" value="V" /> V
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="S"> S
+                          <input type="checkbox" name="dias" value="S" /> S
                         </label>
                         <label class="checkbox mx-2">
-                          <input type="checkbox" name="dias" value="D"> D
+                          <input type="checkbox" name="dias" value="D" /> D
                         </label>
                       </div>
                     </div>
@@ -335,15 +376,22 @@
               <div class="columns">
                 <div class="column is-5">
                   <div class="field">
-                    <label class="label" for="hora-inicio">Hora de inicio</label>
+                    <label class="label negrita" for="hora-inicio"
+                      >Hora de inicio</label
+                    >
                     <div class="control">
-                      <input class="input" id="hora-inicio" type="time" required />
+                      <input
+                        class="input"
+                        id="hora-inicio"
+                        type="time"
+                        required
+                      />
                     </div>
                   </div>
                 </div>
                 <div class="column is-5">
                   <div class="field">
-                    <label class="label" for="hora-fin">Hora de fin</label>
+                    <label class="label negrita" for="hora-fin">Hora de fin</label>
                     <div class="control">
                       <input class="input" id="hora-fin" type="time" required />
                     </div>
@@ -352,12 +400,11 @@
               </div>
             </div>
           </div>
-         
-    
+
           <div class="columns">
             <div class="column is-half">
               <div class="field">
-                <label class="label" for="informacion"
+                <label class="label negrita" for="informacion"
                   >Información del Voluntariado</label
                 >
                 <div class="control">
@@ -375,7 +422,10 @@
           <!-- Botones -->
           <div class="field is-grouped">
             <div class="control">
-              <button type="submit" class="button has-background-info-20-invert">
+              <button
+                type="submit"
+                class="button has-background-info-20-invert"
+              >
                 Añadir
               </button>
             </div>
@@ -415,7 +465,7 @@
               target="_blank"
             >
               <img
-                src="/Imagenes/twitter_azul.png"
+                src="./../Imagenes/twitter_azul.png"
                 alt="Twitter"
                 class="social-icon-img"
               />
@@ -427,7 +477,7 @@
               target="_blank"
             >
               <img
-                src="/Imagenes/Instagram.png"
+                src="./../Imagenes/Instagram.png"
                 alt="Instagram"
                 class="social-icon-img"
               />
@@ -439,7 +489,7 @@
               target="_blank"
             >
               <img
-                src="/Imagenes/facebook_azul.png"
+                src="./../Imagenes/facebook_azul.png"
                 alt="Facebook"
                 class="social-icon-img"
               />
@@ -451,7 +501,7 @@
               target="_blank"
             >
               <img
-                src="/Imagenes/youtube_azul.png"
+                src="./../Imagenes/youtube_azul.png"
                 alt="YouTube"
                 class="social-icon-img"
               />

@@ -13,14 +13,18 @@
 <body>
     <nav class="navbar  has-background-info-20-invert" aria-label="main navigation">
         <div class="navbar-brand">
-              <img class="navbar-item logo-4vv" src="./../Imagenes/logo.png" alt="Logo 4V">
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <img
+                  class="navbar-item logo-4vv"
+                  src="./../Imagenes/logo.png"
+                  alt="Logo 4V"/>
+          <a role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
+        
         <div class="navbar-end">
             <div class="navbar-item">
               <a class="navbar-item has-text-info-90-invert" href="./index.html">Inicio</a>
@@ -28,7 +32,7 @@
               <a class="navbar-item has-text-info-90-invert" href="#login">Sign In <i class="fa-solid fa-right-to-bracket"></i></a>
             </div>
         </div>
-    </nav>      
+    </nav> 
           <!-- Formulario de Inicio sesión / Registro -->
     <div id="login" class="modal">
         <div class="modal-content">
@@ -57,24 +61,26 @@
         </div>
         <div class="has-text-centered mt-4">
             <p>¿No tienes una cuenta? - Regístrate</p>
-            <a class="button" href="#signin" >Registro Voluntario</a>
+            <a class="button" href="#signin">Registro Voluntario</a>
             <a class="button" href="#signinEmpresa">Nueva Empresa</a>
         </div>
         <div class="has-text-centered mt-4">
             <a href="#" class="is-size-7">Learn user licence agreement</a>
         </div>
     </div>
+    
     <!-- Modal de Registro Voluntario -->
     <div id="signin" class="modal mt-6">
         <div class="modal-content">
             <a href="#" class="close-btn">✖</a>
             <h2 class="title is-3 has-text-centered has-text-info-65-invert">Registro Voluntario</h2>
+            
             <form>
                 <div class="field">
                     <input class="input" type="text" placeholder="Nombre Completo" required>
                 </div>
                 <div class="field">
-                    <input class="input" type="date" required>
+                    <input class="input" type="date" placeholder="Fecha de Nacimiento" required>
                 </div>
                 <div class="field">
                     <input class="input" type="text" placeholder="Dirección" required>
@@ -94,6 +100,7 @@
                 <div class="field">
                     <input class="input" type="text" placeholder="Curso" required>
                 </div>
+                
                 <div class="field-registro">
                     <div class="control">
                         <fieldset class="custom-checkbox-group">
@@ -116,6 +123,7 @@
                         </fieldset>
                     </div>
                 </div>   
+                
                 <div class="field">
                     <label class="checkbox">
                         <input type="checkbox" required> Acepto los <a href="#">términos y condiciones</a>.
@@ -195,6 +203,7 @@
             </div>
         </div>
 
+    <section class="section">
         <div class="container">
             <div class="filtro box">
                 <div class="columns is-multiline">
@@ -282,7 +291,7 @@
                                 <div class="columns is-vcentered">
                                     <div class="column is-fullwidth">
                                         <strong class="nombre-proyecto">Taller de Competencias Básicas Digitales en ANFAS Sangüesa</strong><br>
-                                        <span class="tag is-info is-light">Noticia</span>
+                                        <subtitle><span class="tag is-info is-light">Noticia</span></a></subtitle>
                                     </div>
                                 </div>
                             </div>
@@ -310,7 +319,7 @@
                                 <div class="columns is-vcentered">
                                     <div class="column is-fullwidth">
                                         <strong class="nombre-proyecto">Fiesta del Voluntariado 11 de Octubre</strong><br>
-                                        <span class="tag is-warning is-light">Voluntariado</span>
+                                        <subtitle><span class="tag is-warning is-light">Voluntariado</span></a></subtitle>
                                     </div>
                                 </div>
                             </div>
@@ -334,6 +343,7 @@
                 </div>
             </div>
         </div>
+    </section>
 
     <!-- Pie de página -->
     <footer class="has-background-info-20-invert py-6">

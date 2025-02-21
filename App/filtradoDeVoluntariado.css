@@ -1,14 +1,9 @@
-.logo-4vv {
-  width: 5rem;
-  height: 5rem;
-}
 body {
   background-image: url('/Imagenes/fondo1.jpg'); /* Cambia la ruta a tu imagen de fondo */
   background-size: cover; /* Asegúrate de que la imagen cubra todo el fondo */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Mantiene el fondo fijo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
-  color: #fff; /* Cambia el color del texto si es necesario */
 }
 body::before {
   content: ""; /* Necesario para que el pseudo-elemento se muestre */
@@ -26,39 +21,91 @@ body::before {
   z-index: 2; /* Asegúrate de que el contenido esté por encima de la superposición */
 }
 
+.logo-4vv {
+  width: 5rem;
+  height: 5rem;
+}
+
+.espacio-abajo {
+  margin-bottom: 50px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 40px;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+.textarea {
+  min-height: 120px;
+}
+
+/*.button .fa-solid {
+  line-height: inherit; 
+  display: inline-flex; 
+  align-items: center; 
+}*/
+
+
+.date-container {
+  position: relative;
+  display: inline-block;
+}
+
 .input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 10px; 
   cursor: pointer;
 }
+
 .icono-dimension {
-    width: 50px; 
-    height: 50px;
-  }
+  width: 50px; 
+  height: 50px;
+}
 
-  .icono-detalle {
-    width: 50px;
-    height: 28.5px;
-  }
+.icono-detalle {
+  width: 50px;
+  height: 28.5px;
+}
 
- i{
+i {
   padding: 5px;
- }
+}
 
 i:hover {
-  color:rgba(0, 0, 0, 0.5); /* Cambia el color al pasar el cursor */
+  color: rgba(0, 0, 0, 0.5); /* Cambia el color al pasar el cursor */
 }
 
 .social-icon {
   margin: 0 10px;
 }
+
 .social-icon-img {
   width: 30px;
   height: auto;
   transition: transform 0.3s;
 }
+
 .social-icon-img:hover {
   transform: scale(1.1);
+}
+
+img {
+  width: max-content; 
+  height: 270px; 
+  object-fit: cover; 
 }
 
 footer a {
@@ -66,7 +113,7 @@ footer a {
   color: inherit;
 }
 
-footer{
+footer {
   position: relative; /* Asegúrate de que el contenido esté por encima de la superposición */
   z-index: 2; /* Asegúrate de que el contenido esté por encima de la superposición */
 }

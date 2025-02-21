@@ -3,11 +3,12 @@ html {
 }
 
 body {
-  background-image: url("/Imagenes/fondo1.jpg");
+  background-image: url("./../Imagenes/fondo1.jpg");
+  background-attachment: fixed;
 }
 
 .hero-background {
-  background-image: url("/Imagenes/1.jpg");
+  background-image: url("./../Imagenes/fondo_hero.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -19,13 +20,13 @@ body {
 }
 .hero-content::before {
   content: ""; /* Necesario para que el pseudo-elemento se muestre */
-  position: absolute; /* Posiciona el pseudo-elemento */
-  top: 0; /* Alinea al principio del body */
-  left: 0; /* Alinea al lado izquierdo del body */
-  right: 0; /* Alinea al lado derecho del body */
-  bottom: 0; /* Alinea al final del body */
-  background-color: rgba(0, 0, 0, 0.3); /* Negro con 20% de opacidad */
-  z-index: 1; /* Asegúrate de que esté por encima de la imagen de fondo */
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 #boton-volun{
   z-index: 100;
@@ -91,17 +92,19 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
+
 /* registro */
 
 .container {
-  position: relative; /* Asegúrate de que el contenido esté por encima de la superposición */
-  z-index: 2; /* Asegúrate de que el contenido esté por encima de la superposición */
+  position: relative; 
+  z-index: 2; 
 }
 
 .logo-4vv {
   width: 5rem;
   height: 5rem;
 }
+
 .transparencia{
   background-color: black;
   opacity: 0.7;
@@ -190,7 +193,9 @@ body {
   cursor: pointer;
 }
 
-
+.margen-arriba{
+  margin-top: 150px;
+}
 .icons {
   display: flex;
   flex-wrap: wrap;
@@ -211,8 +216,7 @@ body {
 .fondo-card-noticias:hover{
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);  
-  background-color: pink;
+  box-shadow: 0 0 15px rgba(219, 20, 176, 0.4);  
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
@@ -222,17 +226,15 @@ body {
   padding-right: 30px;
   border: 2px solid transparent;
   box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);  
-  background-color: rgb(246, 211, 129);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
-  transition: padding-right 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .fondo-card-voluntariados:hover{
   padding-right: 30px;
   border: 2px solid transparent;
   box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);  
-  background-color: #607192;
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
@@ -373,4 +375,21 @@ footer a {
   left: 15%;
   transform: translate(-50%);
   z-index: 1;
+}
+
+/* CSS DE VISTA DE USUARIO */
+.profile-header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.profile-info {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
